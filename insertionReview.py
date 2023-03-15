@@ -34,8 +34,10 @@ class LinkedList:
       
       
 ll=LinkedList()
-ll.insert_at_begining(34)
-ll.insert_at_begining(23)
-ll.insert_at_begining(44)
-ll.insert_at_begining(20)
-ll.print()
+ll.insert_at_begining(34) #this will be the first element to be inserted in the linkedlist
+ll.insert_at_begining(23) #this will be the second and will push the (34) value and become the head
+ll.insert_at_begining(44) #then this will come and push the (23) and then become the head
+ll.insert_at_begining(20) #then this (20) will be inserted at the beginning too and push the (44) and become the head. 
+
+#notice that the one which is inserted after the other is the one which become the head (so it is aded at the beginning of the linked list)
+ll.print() #then this function comes and print the linked list while itterating through all the values until it reaches the value which does not have another value in after it (in front of it)
