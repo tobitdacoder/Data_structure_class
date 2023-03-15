@@ -24,10 +24,18 @@ class LinkedList:
          itr=itr.next
          
       print(llist)
+   
+   def insert_at_end(self,data):
+      if self.head is None: #if the list is empty, or there is not any head node in the list
+                            # then the data we insert now will be the new head and after it there is not any value which can be the next (that is why we used the None)
+         self.head=Node(data,None) #here we just mean that "now, the new head is the new entered
+                                 # data" which does not have any next value or is not pointing at any value since it is the only value in the linked list
+      
       
       
 ll=LinkedList()
 ll.insert_at_begining(34)
 ll.insert_at_begining(23)
 ll.insert_at_begining(44)
+ll.insert_at_begining(20)
 ll.print()
