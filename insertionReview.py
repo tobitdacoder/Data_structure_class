@@ -45,8 +45,11 @@ class LinkedList:
 
 # SO, THE NEXT METHOD WILL BE A METHOD THAT ALLOW US TAKE A LIST OF VALUES AS AN INPUT AND IT WILL CREATE A NEW FRESH LINKED LIST.
 
-   def insert_values(self,value_list):
+   def insert_values(self,data_list):
       self.head=None #here we dont use the conditional "if" to check wether the list is empty or not because we are going to wipe up all the current value from the list and input new values in that list
+      for data in data_list:
+         self.insert_at_end(data) #here this loop comes to use our previous function (method we created called "insert_at_end")
+                                  #and it is using it so that, when we want to input a list of values at the same time, each value from that inputed list will come after another until we reach the last value which will be added at the end (coz we used the insert_at_end method)
      
       
       
