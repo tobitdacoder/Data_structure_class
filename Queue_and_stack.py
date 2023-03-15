@@ -22,6 +22,14 @@ for i in range(0,10): #then here we create this loop so that it will print the i
    print(queue) #then here, since this print function is in the loop, everytime we apend, a queue list will be printed with the value appended added in, so we are going to jave 10 lists created where each following list will have one element more than the previous one.
    
 
+for i in range(len(queue)): #now here we are implementing the FIFO logic, where the first element to be added previously in the list, will be the first one to be removed (this is the logic of the queue)
+   queue.popleft() #here we are using the "popleft" to implement that idea of removing first the element which came in the first in the previous loop
+   print(queue) #then, in this same loop we print the queue (there will be 9 queues printed since we putted the print in the loop in purpose of seeing what is appening)
+
+
+
+
+
 
 
 
