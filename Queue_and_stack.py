@@ -35,7 +35,9 @@ for i in range(0,10): # here we are going to apply the same concept of the for l
    stack.appendleft(i) #now here is the difference, we are going to append values from 0 to 9 included [range(0,10)] ... 
    print(stack) #then at each appending we will print the list created for each appended value
    
-
+for i in range(len(stack)): #here is the same for loop as previous, (hope its clear now 😃)
+   stack.popleft() #here we are using the same pop left to eliminate the elements from the left to the right to apply the LIFO method
+   print(stack) 
 
 
 
