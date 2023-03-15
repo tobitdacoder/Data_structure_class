@@ -28,6 +28,14 @@ for i in range(len(queue)): #now here we are implementing the FIFO logic, where 
 
 
 
+#!!! NOW LET US IMPLEMENT THE LOGIC OF LIFO (THE CONCEPT OF A STACK)
+stack=deque() #here, we are now creating a stack to implement the concept of (the last in, the first out), so we've first use the function deque to create tour stack object,
+
+for i in range(0,10): # here we are going to apply the same concept of the for loop that we aplied earlier
+   stack.appendleft(i) #now here is the difference, we are going to append values from 0 to 9 included [range(0,10)] ... 
+   print(stack) #then at each appending we will print the list created for each appended value
+   
+
 
 
 
