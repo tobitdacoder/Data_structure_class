@@ -30,6 +30,16 @@ class LinkedList:
                             # then the data we insert now will be the new head and after it there is not any value which can be the next (that is why we used the None)
          self.head=Node(data,None) #here we just mean that "now, the new head is the new entered
                                  # data" which does not have any next value or is not pointing at any value since it is the only value in the linked list
+                                 
+                                 #reemeber for the insertion at the begining we used the "node" object Node(data,self.head) whith the self head as the next value, here, since we want to ad a value at the end if the list, there is not any "next" value that has to be after the adedd value
+         return #this is to show that, since there is now only one value added, we will break the condition just after we added the the single value
+      itr=self.head
+      
+      while itr.next: #while there is another value as the "next", then we are not yet at the end of the list.
+         
+         itr=itr.next  #her we mean : since there is a "next" vlue to the current head, lets make that next value our new itr (self.head) and check again the condition in the loop to see if there is another value after the new itr (which was the previous itr.next), 
+      itr.next=Node(data,None) #here it means that we reached the last element and for that element there is not a next value, then its next value will be the bew node we've created which does not have a next[ Node(data,None)], so after the loop is broken, which means that there is not another next value existing after, we can now add our new element (which will be the "next" of the nast element which did not have a "next" before we added the new data)
+     
       
       
       
@@ -38,6 +48,10 @@ ll.insert_at_begining(34) #this will be the first element to be inserted in the 
 ll.insert_at_begining(23) #this will be the second and will push the (34) value and become the head
 ll.insert_at_begining(44) #then this will come and push the (23) and then become the head
 ll.insert_at_begining(20) #then this (20) will be inserted at the beginning too and push the (44) and become the head. 
+#notice that, for the "insert_at_begining" the one which is inserted after the other is the one which become the head (so it is aded at the beginning of the linked list)
 
-#notice that the one which is inserted after the other is the one which become the head (so it is aded at the beginning of the linked list)
+ll.insert_at_end(100) #this will be the first one to be added at the end of our list
+ll.insert_at_end(130) #the this will come and be addedd after the (100) and become the "next" of (100)
+ll.insert_at_end(141) #then this will also come and become the "next" of (130) 
+                      # NOTICE that, if we dont hadd any value after (141), then it does not have a "next" and then it is ponting at nothing "None"
 ll.print() #then this function comes and print the linked list while itterating through all the values until it reaches the value which does not have another value in after it (in front of it)
