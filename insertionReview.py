@@ -39,6 +39,14 @@ class LinkedList:
          
          itr=itr.next  #her we mean : since there is a "next" vlue to the current head, lets make that next value our new itr (self.head) and check again the condition in the loop to see if there is another value after the new itr (which was the previous itr.next), 
       itr.next=Node(data,None) #here it means that we reached the last element and for that element there is not a next value, then its next value will be the bew node we've created which does not have a next[ Node(data,None)], so after the loop is broken, which means that there is not another next value existing after, we can now add our new element (which will be the "next" of the nast element which did not have a "next" before we added the new data)
+      
+#!!!!! 👆👆👆UNTIL NOW, WE'VE LEARNT THE METHODS (insert_at_begining, print, insert_at_end) 😃😃
+#!!!!! NIW LETS STUDY OTHER INTERESTING METHODS (OR FUNCTIONS)
+
+# SO, THE NEXT METHOD WILL BE A METHOD THAT ALLOW US TAKE A LIST OF VALUES AS AN INPUT AND IT WILL CREATE A NEW FRESH LINKED LIST.
+
+   def insert_values(self,value_list):
+      self.head=None #here we dont use the conditional "if" to check wether the list is empty or not because we are going to wipe up all the current value from the list and input new values in that list
      
       
       
@@ -55,3 +63,8 @@ ll.insert_at_end(130) #the this will come and be addedd after the (100) and beco
 ll.insert_at_end(141) #then this will also come and become the "next" of (130) 
                       # NOTICE that, if we dont hadd any value after (141), then it does not have a "next" and then it is ponting at nothing "None"
 ll.print() #then this function comes and print the linked list while itterating through all the values until it reaches the value which does not have another value in after it (in front of it)
+
+
+
+
+
