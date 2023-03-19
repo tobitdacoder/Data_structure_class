@@ -50,6 +50,13 @@ class LinkedList:
       for data in data_list:
          self.insert_at_end(data) #here this loop comes to use our previous function (method we created called "insert_at_end")
                                   #and it is using it so that, when we want to input a list of values at the same time, each value from that inputed list will come after another until we reach the last value which will be added at the end (coz we used the insert_at_end method)
+   def get_length(self):
+      count=0
+      itr=self.head
+      while itr:
+         count+=1
+         itr=itr.next
+      return count
    
       
 ll=LinkedList()
@@ -65,6 +72,7 @@ ll.insert_at_end(141) #then this will also come and become the "next" of (130)
                       # NOTICE that, if we dont hadd any value after (141), then it does not have a "next" and then it is ponting at nothing "None"
 ll.insert_values(["babane ","mangue ","tomato ","garlic"]) #here, as we saw, we erased all the previous content of the previous linked lists and created a new one with the inputed content,
 ll.print() #then this function comes and print the linked list while itterating through all the values until it reaches the value which does not have another value in after it (in front of it)
+ll.get_length()
 
 
 
