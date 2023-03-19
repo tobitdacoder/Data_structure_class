@@ -65,6 +65,14 @@ class LinkedList:
       if index==0: #here we just say "if the index is equal to the head element (index 0)" then we remove it (WE ARE REMOVING THE HEAD AT THE BEGGINNING OF THE LIST)
          self.head=self.head.next #and this is how we remove the head, by making our next element our new head (this will remove our previous head of index 0)
          return
+      count=0 #this because in linked list you have to manualy msintain the count to reach that index (here we are dealing with O(n) )
+      
+      #so as usual, to itterate through the list, we do:
+      itr=self.head
+      while itr:
+         itr=itr.next
+         #here we have to iterrate through the list to reach that index (and the value under it)
+      
       
 ll=LinkedList()
 ll.insert_at_begining(34) #this will be the first element to be inserted in the linkedlist
