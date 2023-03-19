@@ -59,6 +59,10 @@ class LinkedList:
          itr=itr.next
       return count #if the loop is broken, the count will then be retrieved
    
+   def remove_at(self,index): #this function will remove the element at the wanted index
+      if index < 0 or index >= self.get_length(): #here we are just specifying that if the index is negative or above the index range of the list, it will be an invalid one. here  "index >= self.get_length()" means that if the length of the list is 6 then the last element is of index 5 (so 6 is >= index and is invalid )
+         print("index is invalid 😢")
+   
       
 ll=LinkedList()
 ll.insert_at_begining(34) #this will be the first element to be inserted in the linkedlist
