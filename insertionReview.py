@@ -59,19 +59,8 @@ class LinkedList:
          itr=itr.next
       return count #if the loop is broken, the count will then be retrieved
    
-   def remove_at(self,index): #this function will remove the element at the wanted index
-      if index < 0 or index >= self.get_length(): #here we are just specifying that if the index is negative or above the index range of the list, it will be an invalid one. here  "index >= self.get_length()" means that if the length of the list is 6 then the last element is of index 5 (so 6 is >= index and is invalid )
-         raise Exception("invalid index 😥") #this is the exception that will be raised if the if statement's condition is met (learn more about this one) 
-      if index==0: #here we just say "if the index is equal to the head element (index 0)" then we remove it (WE ARE REMOVING THE HEAD AT THE BEGGINNING OF THE LIST)
-         self.head=self.head.next #and this is how we remove the head, by making our next element our new head (this will remove our previous head of index 0)
-         return
-      count=0 #this because in linked list you have to manualy msintain the count to reach that index (here we are dealing with O(n) )
-      
-      #so as usual, to itterate through the list, we do:
-      itr=self.head
-      while itr:
-         itr=itr.next
-         #here we have to iterrate through the list to reach that index (and the value under it)
+   
+''' SO, LITLE, CHANGE 😁, SINCE THIS FILE WAS TO REMIND US HOW TO RECREATE AN INSERTION MODULE TO OUR LINKED LIST AND ALSO SOME OTHER COOL MODULES, LET US GO BACK TO OUR ORIGINAL FILE CALLED "Arrays_and_linked_list" TO CONTINUE WITH MORE COOL MODULES AND FUNCTIONS TO BE USED ON LINKED LISTS, THANKS TO Y'ALL 😃🙏😊 '''
       
       
 ll=LinkedList()
