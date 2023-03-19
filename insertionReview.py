@@ -41,7 +41,7 @@ class LinkedList:
       itr.next=Node(data,None) #here it means that we reached the last element and for that element there is not a next value, then its next value will be the bew node we've created which does not have a next[ Node(data,None)], so after the loop is broken, which means that there is not another next value existing after, we can now add our new element (which will be the "next" of the nast element which did not have a "next" before we added the new data)
       
 #!!!!! 👆👆👆UNTIL NOW, WE'VE LEARNT THE METHODS (insert_at_begining, print, insert_at_end) 😃😃
-#!!!!! NIW LETS STUDY OTHER INTERESTING METHODS (OR FUNCTIONS)
+#!!!!! NOW LETS STUDY OTHER INTERESTING METHODS (OR FUNCTIONS)
 
 # SO, THE NEXT METHOD WILL BE A METHOD THAT ALLOW US TAKE A LIST OF VALUES AS AN INPUT AND IT WILL CREATE A NEW FRESH LINKED LIST.
 
@@ -50,9 +50,7 @@ class LinkedList:
       for data in data_list:
          self.insert_at_end(data) #here this loop comes to use our previous function (method we created called "insert_at_end")
                                   #and it is using it so that, when we want to input a list of values at the same time, each value from that inputed list will come after another until we reach the last value which will be added at the end (coz we used the insert_at_end method)
-     
-      
-      
+   
       
 ll=LinkedList()
 ll.insert_at_begining(34) #this will be the first element to be inserted in the linkedlist
@@ -65,6 +63,7 @@ ll.insert_at_end(100) #this will be the first one to be added at the end of our 
 ll.insert_at_end(130) #the this will come and be addedd after the (100) and become the "next" of (100)
 ll.insert_at_end(141) #then this will also come and become the "next" of (130) 
                       # NOTICE that, if we dont hadd any value after (141), then it does not have a "next" and then it is ponting at nothing "None"
+ll.insert_values(["babane ","mangue ","tomato ","garlic"]) #here, as we saw, we erased all the previous content of the previous linked lists and created a new one with the inputed content,
 ll.print() #then this function comes and print the linked list while itterating through all the values until it reaches the value which does not have another value in after it (in front of it)
 
 
