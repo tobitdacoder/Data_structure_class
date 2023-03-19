@@ -72,7 +72,8 @@ ll.insert_at_end(141) #then this will also come and become the "next" of (130)
                       # NOTICE that, if we dont hadd any value after (141), then it does not have a "next" and then it is ponting at nothing "None"
 ll.insert_values(["babane ","mangue ","tomato ","garlic"]) #here, as we saw, we erased all the previous content of the previous linked lists and created a new one with the inputed content,
 ll.print() #then this function comes and print the linked list while itterating through all the values until it reaches the value which does not have another value in after it (in front of it)
-ll.get_length()
+length=ll.get_length()
+print(f"the length is equal to {length} ") #now we print the length like this after weve already stored it into a variable to use it in a much easier way
 
 
 
