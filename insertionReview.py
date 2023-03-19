@@ -61,7 +61,7 @@ class LinkedList:
    
    def remove_at(self,index): #this function will remove the element at the wanted index
       if index < 0 or index >= self.get_length(): #here we are just specifying that if the index is negative or above the index range of the list, it will be an invalid one. here  "index >= self.get_length()" means that if the length of the list is 6 then the last element is of index 5 (so 6 is >= index and is invalid )
-         print("index is invalid 😢")
+         raise Exception("invalid index 😥") #this is the exception that will be raised if the if statement's condition is met (learn more about this one)
    
       
 ll=LinkedList()
