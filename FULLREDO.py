@@ -85,10 +85,10 @@ class LinkedList:
    def insert_after_value(self,data_after,data_to_insert):
       #we have first to search for first occurance of "data_after" value in linked list
       #Now insert "data_to_insert" after data_after node (try first, then look for the answer after in the description of the video by code basics)
-      if self.head is None: #first we check if the list is empty or not
+      if self.head is None: #first we check if the list is empty or not, if it is empty, then we return empty (coz we cannot add a value after a value which does not exist)
          return
       if self.head.data==data_after: #then, if it is not , we verify if the data_after we provided is equal to our self.head.data. 
-         self.head.next=Node(data_to_insert,self.head.next) #here we are now defining what is our next node.
+         self.head.next=Node(data_to_insert,self.head.next) #here we are now defining what is our node that will be inserted. if you noticed, now we are saying that, if the value that we are going to add another after it is equal to the data of the existing head, then we are going to insert the "data_to_insert" after it and the "next" of the "data_to_insert" will be the "next" of the head or the value after (since the condition is "when the self.head.data==data_after").
          return
       itr=self.head #then we iterate through our list 
       while itr:
