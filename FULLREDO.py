@@ -90,6 +90,13 @@ class LinkedList:
       if self.head.data==data_after:
          self.head.next=Node(data_to_insert,self.head.next)
          return
+      itr=self.head
+      while itr:
+         
+         if itr.data == data_after:
+               itr.next = Node(data_to_insert, itr.next)
+               break
+         itr=itr.next
          
       
       
