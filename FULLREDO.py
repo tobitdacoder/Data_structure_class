@@ -1,4 +1,4 @@
-""" SO GUYZ, HERE IS THE FULL SUCCESFULL REDO OF EVERY NEW MODULE OR FUNCTION WE'VE IMPLEMENTED SO FAR.... TRY ALSO TO RECALL ALL THE FUNCTIONS WEVE COVERED SO FAR TO MAKE SURE YOU'VE IMPLEMENTED EVERYTHING WELL BEFORE TO ATTEMPT THE EXERCICES ... THIS IS HOW WE ARE GOING TO DO FROM NOW SO THAT WE CAN EASILY UNDERSTAND WHERE WE ARE """
+# SO GUYZ, HERE IS THE FULL SUCCESFULL REDO OF EVERY NEW MODULE OR FUNCTION WE'VE IMPLEMENTED SO FAR.... TRY ALSO TO RECALL ALL THE FUNCTIONS WEVE COVERED SO FAR TO MAKE SURE YOU'VE IMPLEMENTED EVERYTHING WELL BEFORE TO ATTEMPT THE EXERCICES ... THIS IS HOW WE ARE GOING TO DO FROM NOW SO THAT WE CAN EASILY UNDERSTAND WHERE WE ARE 
 
 
 
@@ -84,8 +84,14 @@ class LinkedList:
          
    def insert_after_value(self,data_after,data_to_insert):
       #we have first to search for first occurance of "data_after" value in linked list
-      #Now insert "data_to_insert" after node (try first, then look for the answer after in the description of the video by code basics)
-      pass
+      #Now insert "data_to_insert" after data_after node (try first, then look for the answer after in the description of the video by code basics)
+      if self.head is None:
+         return
+      if self.head.data==data_after:
+         self.head.next=Node(data_to_insert,self.head.next)
+         return
+         
+      
       
       
       
@@ -100,5 +106,37 @@ ll.Insert_at_begining(94.6)
 length=ll.get_length()
 ll.insert_at(1,777)
 ll.remove_at(1)
+ll.insert_after_value(65,100)
 ll.print()
 print(length)
+
+
+def gen(m, n):
+
+    while m < n:
+
+        yield m
+
+        m *= 2
+
+    yield n
+
+lst = []
+
+g1 = gen(2, 5)
+
+g2 = gen(4, 20)
+
+while True:
+
+    try:
+
+        lst.append(next(g1))
+
+        lst.append(next(g2))
+
+    except StopIteration:
+
+        break
+res=gen(g1,g2)
+print(res)
