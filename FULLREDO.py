@@ -80,9 +80,43 @@ class LinkedList:
             itr.next=itr.next.next
          itr=itr.next
          count+=1
-         
-         
+   
+   
+   
+   
    def insert_after_value(self,data_after,data_to_insert):
+      if self.head==None:
+         return
+      if self.head.data==data_after:
+         self.head.next=Node(data_to_insert,self.head.next)
+         return
+      itr=self.head
+      while itr:
+         if itr.data==data_after:
+            itr.next=Node(data_to_insert,itr.next)
+            break
+         itr=itr.next
+         
+   def remove_by_value(self,data):
+      #remove first node  that contains data
+      # i suggest you to review the above code before to attempt these exercices
+      if self.head==None:
+         return
+      if self.head.data==data:
+         self.head=self.head.next
+         return
+      
+      itr=self.head
+      while itr.next:
+         if itr.next.data==data:
+            itr.next=itr.next.next
+            
+         itr=itr.next
+      
+      
+         
+         
+'''   def insert_after_value(self,data_after,data_to_insert):
       #we have first to search for first occurance of "data_after" value in linked list
       #Now insert "data_to_insert" after data_after node (try first, then look for the answer after in the description of the video by code basics)
       if self.head is None: #first we check if the list is empty or not, if it is empty, then we return empty (coz we cannot add a value after a value which does not exist)
@@ -90,13 +124,15 @@ class LinkedList:
       if self.head.data==data_after: #then, if it is not , we verify if the data_after we provided is equal to our self.head.data. 
          self.head.next=Node(data_to_insert,self.head.next) #here we are now defining what is our node that will be inserted. if you noticed, now we are saying that, if the value that we are going to add another after it is equal to the data of the existing head, then we are going to insert the "data_to_insert" after it and the "next" of the "data_to_insert" will be the "next" of the head or the value after (since the condition is "when the self.head.data==data_after").
          return
-      itr=self.head #then we iterate through our list 
+      itr=self.head #here we iterate through our list when self.head is not equal to data_after
       while itr:
          
          if itr.data == data_after: #another condition (we gonna go deep)
                itr.next = Node(data_to_insert, itr.next)
                break
          itr=itr.next
+         '''
+
          
       
       
@@ -113,37 +149,10 @@ ll.Insert_at_begining(94.6)
 length=ll.get_length()
 ll.insert_at(1,777)
 ll.remove_at(1)
-ll.insert_after_value(65,100)
+ll.insert_after_value(54.6,400)
+ll.insert_after_value(400,400)
+ll.remove_by_value(65)
 ll.print()
 print(length)
 
 
-def gen(m, n):
-
-    while m < n:
-
-        yield m
-
-        m *= 2
-
-    yield n
-
-lst = []
-
-g1 = gen(2, 5)
-
-g2 = gen(4, 20)
-
-while True:
-
-    try:
-
-        lst.append(next(g1))
-
-        lst.append(next(g2))
-
-    except StopIteration:
-
-        break
-res=gen(g1,g2)
-print(res)
