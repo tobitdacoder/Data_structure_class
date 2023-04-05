@@ -49,16 +49,23 @@ print(stack)
 class stack:
    def __init__(self):
       self.container=deque()
+      #here we are just initiating the variable "container" and we give to it the valie deque()
    def push(self,val):
       return self.container.append(val)
+      #this is the function that we will use to append an element in the deque
    def pop(self):
       return self.container.pop()
+      #this is the one we will use to pop elements
+      #we can create a function to pop left if we want
    def peek(self):
       return self.container[-1]
+      #this will always return for us the last elelemt of the deque list (this can be helpfull in some ways)
    def is_empty(self):
       return len(self.container)==0
+      #this automaticaly make our deque empty
    def size(self):
       return len(self.container)
+      #and this, simply give us the length of our deque list 
 
 
 
