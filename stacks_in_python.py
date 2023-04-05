@@ -46,10 +46,11 @@ print(stack)
 
 #now lets create a simple class implemnting the deque module:
 
-class stack:
+class Stack:
    def __init__(self):
       self.container=deque()
       #here we are just initiating the variable "container" and we give to it the valie deque()
+      #THIS IS AN OBJECT OF THE STACK CLASS!
    def push(self,val):
       return self.container.append(val)
       #this is the function that we will use to append an element in the deque
@@ -66,6 +67,12 @@ class stack:
    def size(self):
       return len(self.container)
       #and this, simply give us the length of our deque list 
-
+      
+s=Stack()
+s.push(45)
+s.push(465)
+s.push(23)
+s.pop()
+print(s.peek())
 
 
