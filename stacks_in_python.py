@@ -35,3 +35,8 @@ print(stack_list)
 from collections import deque #import deque from collections 
 stack=deque() #then assign it to stack which is a variable (container)
 # to see all the methods available in deque (which we egaled to stack, just write "stack." and this will show the list of all available method under stack)
+
+stack.append("https://www.cnn.com/")
+print(stack)
+
+
