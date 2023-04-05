@@ -29,4 +29,9 @@ print(stack_list)
 
 # here we are starting to implement the stack notion, and here the idea is to implement it in the logic of a website and its pages, so , when we open a new page of a website, that page is added to our list (is appended to our list) and here when we will click to the return arrow, the last page which we oppenned willl be the first on to be closed (LIFO)
 
-#the problem of implementing the stack using a dynamic array is that, when its full, it will copy all the elelemts from the list and paste it into a new location and add the double of the previous space that we have, so the best way to use stack and queues is to use the "deque"
+#the problem of implementing the stack using a dynamic array is that, when its full, it will copy all the elelemts from the list and paste it into a new location and add the double of the previous space that we have, so the best way to use stack and queues is to use the "collections.deque" ... deque is a generalization of stacks and queues (pronounced "deck" and is short form of "double-ended queue")... memory efficient appends and pops from either side of the deque with approximately the same O(1) performance in either direction. 
+
+
+from collections import deque #import deque from collections 
+stack=deque() #then assign it to stack which is a variable (container)
+# to see all the methods available in deque (which we egaled to stack, just write "stack." and this will show the list of all available method under stack)
