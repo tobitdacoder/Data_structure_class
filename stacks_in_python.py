@@ -37,6 +37,14 @@ stack=deque() #then assign it to stack which is a variable (container)
 # to see all the methods available in deque (which we egaled to stack, just write "stack." and this will show the list of all available method under stack)
 
 stack.append("https://www.cnn.com/")
+stack.append("https://www.cnn.com/world")
+stack.append("https://www.cnn.com/DRC")
+stack.append("https://www.cnn.com/GOMA") 
+stack.appendleft("https://www.cnn.com/katindo") #here we are appending but left, which means that we are going to add the element at the beginning 
+stack.popleft() #this will then come and remove the same element we added at the begining (we used the left for that purpose)
 print(stack)
+
+#now lets create a simple class implemnting the deque module:
+
 
 
