@@ -11,3 +11,16 @@
 # first we have to know that push/pop are constant time operations O(1) 
 
 #when u are using the "undo" CTRL+Z functionality in any editor, u are using the stack to track down last set of operations
+
+# import deque as dq
+# stk=deque()
+# stk.append(45)
+# stk.append(65)
+# stk.pop()
+
+stack_list=[]
+stack_list.append(34)
+stack_list.append(54)
+stack_list.append(81)
+stack_list.append(27)
+print(stack_list)
