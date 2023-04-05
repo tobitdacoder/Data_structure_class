@@ -19,8 +19,14 @@
 # stk.pop()
 
 stack_list=[]
-stack_list.append(34)
-stack_list.append(54)
-stack_list.append(81)
-stack_list.append(27)
+stack_list.append('https://www.cnn.com/')
+stack_list.append('https://www.cnn.com/world')
+stack_list.append('https://www.cnn.com/DRC')
+stack_list.append('https://www.cnn.com/GOMA')
+stack_list.pop() #this pop will remove the last element from the list "...GOMA"
 print(stack_list)
+# print(stack_list[-1]) this is to print the last element of the list without poping it out 
+
+# here we are starting to implement the stack notion, and here the idea is to implement it in the logic of a website and its pages, so , when we open a new page of a website, that page is added to our list (is appended to our list) and here when we will click to the return arrow, the last page which we oppenned willl be the first on to be closed (LIFO)
+
+#the problem of implementing the stack using a dynamic array is that, when its full, it will copy all the elelemts from the list and paste it into a new location and add the double of the previous space that we have, so the best way to use stack and queues is to use the "deque"
