@@ -32,9 +32,39 @@ class Students:
       self.my_regno = my_regno
       
 student1=Students("toby","A98591","S22B23/001")
+#this is the first object we have from our class
+# here we can see that we used our class in the object in order to use its structure
 
 print(type(student1))
 
+########################################################################
+
+#DATASTRUCTURE REVISION:
+
+#Text type: str
+# numrical type: int, float, complex
+#boolean typ: bool
+#null type: Null
+#sequence type: list,tuple,range
+#Mapping type: dict
+
+#LIST:
+
+list=[1,65,22,86,93,44,81,29,52,15,18]
+for i in range(len(list)):
+   #this loop is printing the sentense "this is the for loop" 
+   # n times (n is the number of elements of the "list")
+   print("this is the for loop")
+   
+for i in list:
+   print(i) #here we are just printing directly all the elements of the same list
+            # instead of just using its length 
+
+
+
+for i in range(0,100,5): 
+    print(i)
+    #this will print values in the range 0 and 100(excluded), notice the 5, that five is the gap to be taken between each elememt of the range... 0 5 10 15 20 25 etc
    
       
       
