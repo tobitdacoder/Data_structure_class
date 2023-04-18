@@ -103,6 +103,21 @@ def get_value():
             break
     return x
 main()   
+
+
+########################################################################
+
+import math
+
+while True:
+    
+    try:
+        n=int(input("gimme the value: "))
+        print(math.sqrt(n))
+    except ValueError:
+        print("this is not an integer")
+    else:
+        break
       
       
 
