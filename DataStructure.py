@@ -60,11 +60,18 @@ for i in list:
    print(i) #here we are just printing directly all the elements of the same list
             # instead of just using its length 
 
-
+###########################################################
 
 for i in range(0,100,5): 
     print(i)
     #this will print values in the range 0 and 100(excluded), notice the 5, that five is the gap to be taken between each elememt of the range... 0 5 10 15 20 25 etc
+
+###########################################################
+    
+stud=[23,43,45,65,67,76,78,87]
+for i in range (len(stud)):
+   #this will print a numbered list of the list content : like 1-23, 2-43 etc
+   print(i+1,stud[i],sep='-')
    
       
       
