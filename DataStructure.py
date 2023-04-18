@@ -84,11 +84,25 @@ print(res)
 ###########################################################
 
 my_dict = {"apple": 1, "banana": 2, "cherry": 3}
-
+""" using my_dict.get(apple) will retrieve the value stored in the key """
 # loop over the keys and print them
 for key in my_dict.keys():
     print(key) #to get the keys only, we use the .keys() in the loop definition
-   
+    
+
+def main():
+    x=get_value()
+    print(f"{x} is the value")
+def get_value():
+    while True: #while the except exist, then we keep asking for the input
+        try:
+            x=int(input("gimme the number: "))
+        except ValueError:
+            print("this is not a number")
+        else:
+            break
+    return x
+main()   
       
       
 
