@@ -80,6 +80,14 @@ res=dictt["second"] #to print the content or the value of the given key
                     # we store the dictionry key in a variable, and by printing that
                     # variable, we will print the value of that key
 print(res)
+
+###########################################################
+
+my_dict = {"apple": 1, "banana": 2, "cherry": 3}
+
+# loop over the keys and print them
+for key in my_dict.keys():
+    print(key) #to get the keys only, we use the .keys() in the loop definition
    
       
       
