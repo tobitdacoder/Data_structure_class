@@ -73,6 +73,14 @@ for i in range (len(stud)):
    #this will print a numbered list of the list content : like 1-23, 2-43 etc
    print(i+1,stud[i],sep='-')
    
+###########################################################
+
+dictt={"first":1,"second":2,"third":3}
+res=dictt["second"] #to print the content or the value of the given key
+                    # we store the dictionry key in a variable, and by printing that
+                    # variable, we will print the value of that key
+print(res)
+   
       
       
 
