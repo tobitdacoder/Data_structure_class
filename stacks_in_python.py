@@ -27,7 +27,7 @@ stack_list.pop() #this pop will remove the last element from the list "...GOMA"
 print(stack_list)
 # print(stack_list[-1]) this is to print the last element of the list without poping it out 
 
-# here we are starting to implement the stack notion, and here the idea is to implement it in the logic of a website and its pages, so , when we open a new page of a website, that page is added to our list (is appended to our list) and here when we will click to the return arrow, the last page which we oppenned willl be the first on to be closed (LIFO)
+# here we are starting to implement the stack notion, and here the idea is to implement it in the logic of a website and its pages, so , when we open a new page of a website, that page is added to our list (is appended to our list) and here when we will click to the return arrow, the last page which we oppenned will be the first on to be closed (LIFO)
 
 #the problem of implementing the stack using a dynamic array is that, when its full, it will copy all the elelemts from the list and paste it into a new location and add the double of the previous space that we have, so the best way to use stack and queues is to use the "collections.deque" ... deque is a generalization of stacks and queues (pronounced "deck" and is short form of "double-ended queue")... memory efficient appends and pops from either side of the deque with approximately the same O(1) performance in either direction. 
 
@@ -60,7 +60,7 @@ class Stack:
       #we can create a function to pop left if we want
    def peek(self):
       return self.container[-1]
-      #this will always return for us the last elelemt of the deque list (this can be helpfull in some ways)
+      #this will always return for us the last element of the deque list (this can be helpfull in some ways)
    def is_empty(self):
       return len(self.container)==0
       #this automaticaly make our deque empty
